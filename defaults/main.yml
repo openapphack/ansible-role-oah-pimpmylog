@@ -1,4 +1,5 @@
 ---
+oah_command: install
 pimpmylog_install_dir: /var/www/pimpmylog
 pimpmylog_repo: https://github.com/potsky/PimpMyLog.git
 pimpmylog_version: master

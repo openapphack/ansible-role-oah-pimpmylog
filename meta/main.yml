@@ -3,7 +3,7 @@ dependencies: []
 
 galaxy_info:
   author: Vinod Panicker
-  description: Pimp my Log installation for openapphack
+  description: Pimpmylog installation for OAH
   company: ""
   license: "license (BSD, MIT)"
   min_ansible_version: 2.0

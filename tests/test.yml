@@ -8,4 +8,4 @@
   roles:
     - oah.apache
     - oah.php
-    - ansible-role-oah-pimpmylog
+    - ansible-role-pimpmylog

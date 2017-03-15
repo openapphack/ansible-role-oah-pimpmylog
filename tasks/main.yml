@@ -1,14 +1,17 @@
 ---
-- name: Clone Pimp my Log.
-  git:
-    dest: "{{ pimpmylog_install_dir }}"
-    repo: "{{ pimpmylog_repo }}"
-    version: "{{ pimpmylog_version }}"
-    accept_hostkey: yes
+- include: tasks/oah-install.yml
+  when: oah_command == "install"
 
-- name: Grant all privileges on the Pimp my Log directory.
-  file:
-    path: "{{ pimpmylog_install_dir }}"
-    state: directory
-    mode: 0777
-  when: pimpmylog_grant_all_privs
+- include: tasks/oah-update.yml
+  when: oah_command == "update"
+
+- include: tasks/oah-remove.yml
+  when: oah_command == "remove"
+
+- include: tasks/oah-reset.yml
+  when: oah_command == "reset"
+
+- include: tasks/oah-validate.yml
+  when: oah_command == "validate"
+
+#- include: tasks/oah-{{ oah_command }}.yml
